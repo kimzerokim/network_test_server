@@ -26,6 +26,7 @@ public class GetRequestHandler {
 		if (url.equals("getfile")) {
 			BigfileHandler handler = new BigfileHandler(this.channel);
 			try {
+				handler.sendHeader();
 				handler.fileSend();
 			} catch (IOException e) {
 				e.printStackTrace();
